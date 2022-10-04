@@ -10,7 +10,7 @@ One of the very few resources on this topic is [micropython docs](https://docs.m
 
 All the examples below are real, coming from `micropython` codebase of [Trezor firmware](https://github.com/trezor/trezor-firmware) repository.
 
-(Want to measure how big is the code in the final binary? Try out [size analysis tool](https://github.com/trezor/trezor-firmware/pull/2327))
+(Want to measure how big is the code in the final binary? Try out [size analysis tool](https://github.com/grdddj/binsize))
 
 ## Strategies
 

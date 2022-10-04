@@ -1,4 +1,4 @@
-from src.upy_size.strategies.constants_local_only import local_only_constants
+from src.upysize.strategies.constants_local_only import local_only_constants
 
 CODE = """\
 from micropython import const

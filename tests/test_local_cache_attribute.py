@@ -1,4 +1,4 @@
-from src.upy_size.strategies.local_cache_attribute import local_cache_attribute
+from src.upysize.strategies.local_cache_attribute import local_cache_attribute
 
 CODE = """\
 def abc(msg):

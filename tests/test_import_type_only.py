@@ -1,4 +1,4 @@
-from src.upy_size.strategies.import_type_only import type_only_import
+from src.upysize.strategies.import_type_only import type_only_import
 
 CODE = """\
 from typing import TYPE_CHECKING

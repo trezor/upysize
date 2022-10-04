@@ -1,4 +1,4 @@
-from src.upy_size.strategies.small_classes import init_only_classes
+from src.upysize.strategies.small_classes import init_only_classes
 
 CODE = """\
 from message import MessageType2, MessageType3

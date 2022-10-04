@@ -1,7 +1,7 @@
 import ast
 from typing import Type
 
-from src.upy_size.strategies.helpers import (
+from src.upysize.strategies.helpers import (
     all_functions,
     all_global_symbols,
     all_nodes_outside_of_function,

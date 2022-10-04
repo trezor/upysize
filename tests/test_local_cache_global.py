@@ -1,4 +1,4 @@
-from src.upy_size.strategies.local_cache_global import local_cache_global
+from src.upysize.strategies.local_cache_global import local_cache_global
 
 CODE = """\
 import messages

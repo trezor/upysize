@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "upy_size"
+name = "upysize"
 version = "0.1.0"
 description = "Tool to help decrease compiled size of micropython code"
 authors = [
@@ -22,7 +22,7 @@ pytest-cov = "^4.0.0"
 
 # Exposing the `upysize` command to the user
 [tool.poetry.scripts]
-upysize = "upy_size.main:main"
+upysize = "upysize.__main__:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

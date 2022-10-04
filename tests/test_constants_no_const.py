@@ -1,4 +1,4 @@
-from src.upy_size.strategies.constants_no_const import no_const_number
+from src.upysize.strategies.constants_no_const import no_const_number
 
 CODE = """\
 from micropython import const

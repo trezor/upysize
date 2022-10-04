@@ -1,4 +1,4 @@
-from src.upy_size.strategies.keyword_arguments import keyword_arguments
+from src.upysize.strategies.keyword_arguments import keyword_arguments
 
 CODE = """\
 import layouts

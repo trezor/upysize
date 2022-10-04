@@ -1,5 +1,5 @@
-from src.upy_size.strategies import Settings
-from src.upy_size.strategies.function_inline import function_inline
+from src.upysize.strategies import Settings
+from src.upysize.strategies.function_inline import function_inline
 
 CODE = """\
 from helpers import Obj

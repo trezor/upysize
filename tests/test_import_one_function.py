@@ -1,4 +1,4 @@
-from src.upy_size.strategies.import_one_function import one_function_import
+from src.upysize.strategies.import_one_function import one_function_import
 
 CODE = """\
 from micropython import const
