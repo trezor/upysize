@@ -15,6 +15,9 @@ All the examples below are real, coming from `micropython` codebase of [Trezor f
 
 ## Tool basic usage
 
+Installable by `pip install upysize` - see [PyPI](https://pypi.org/project/upysize/).
+
+
 Installing this package creates `upysize` command, which takes the file/directory as an argument.
 
 ```bash
