@@ -2,15 +2,19 @@
 name = "upysize"
 version = "0.1.0"
 description = "Tool to help decrease compiled size of micropython code"
+license = "MIT"
 authors = [
     "SatoshiLabs <info@satoshilabs.com>",
     "grdddj <jiri.musil06@seznam.cz>",
 ]
+readme = "README.md"
+repository = "https://github.com/grdddj/upysize"
+keywords = ["micropython", "code size"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 click = "^8.1.3"
-typing-extensions = "^4.3.0"
+typing-extensions = "*"
 
 [tool.poetry.dev-dependencies]
 black = "^22.8.0"

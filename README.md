@@ -12,6 +12,19 @@ All the examples below are real, coming from `micropython` codebase of [Trezor f
 
 (Want to measure how big is the code in the final binary? Try out [size analysis tool](https://github.com/grdddj/binsize))
 
+
+## Tool basic usage
+
+Installing this package creates `upysize` command, which takes the file/directory as an argument.
+
+```bash
+$ upysize .
+$ upysize src/apps/bitcoin/sign_tx/bitcoin.py
+$ upysize src/apps
+```
+
+Result will be printed into terminal, suggesting some changes in specific files, together with estimated decrease of binary size.
+
 ## Strategies
 
 Overall, strategies have one thing in common - reducing the amount of instructions/bytecode that need to be compiled into the final binary/executable.
