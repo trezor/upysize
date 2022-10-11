@@ -12,7 +12,12 @@ class TypeOnlyImport(SpaceSaving):
     symbol: str
 
     def saved_bytes(self) -> int:
-        return 7
+        """
+        Depends whether the symbol is the only one imported
+        from the module. First-time imports take 16 bytes
+        and others only 9-10 bytes.
+        """
+        return 12
 
     def __repr__(self) -> str:  # pragma: no cover
         return f"{self.symbol} (~{self.saved_bytes()} bytes)"

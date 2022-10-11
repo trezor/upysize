@@ -15,6 +15,10 @@ class Kwarg(SpaceSaving):
     line_no: int
 
     def saved_bytes(self) -> int:
+        """
+        The cost of passing a keyword argument is 3 bytes,
+        because it needs to LOAD a QSTR with the key, which costs exactly that.
+        """
         return self.amount * 3
 
     def __repr__(self) -> str:  # pragma: no cover

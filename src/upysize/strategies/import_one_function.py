@@ -20,7 +20,26 @@ class OneFunctionImport(SpaceSaving):
     used_as_type_hint: bool = False
 
     def saved_bytes(self) -> int:
-        return 4 + (self.usages_in_func - 1) * 2
+        """
+        Global import costs 16 bytes.
+        Local import costs 14 bytes.
+
+        (Depends whether it is a single import or not.
+        `from trezor import wire` costs 16 bytes,
+        `from trezor import wire, ui` costs 16 + 9 bytes)
+
+        Accessing global symbol is 3 bytes.
+        Accessing local symbol is 1 byte.
+        """
+        global_import = 16
+        local_import = 14
+
+        global_access = 3
+        local_access = 1
+
+        return self.usages_in_func * (global_access - local_access) - (
+            global_import - local_import
+        )
 
     def __repr__(self) -> str:  # pragma: no cover
         type_hint_msg = (

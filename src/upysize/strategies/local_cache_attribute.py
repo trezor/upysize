@@ -22,7 +22,22 @@ class LocalCache(SpaceSaving):
     symbol_assigned: bool
 
     def saved_bytes(self) -> int:
-        return self.cache_candidate.amount * 2
+        """
+        Accessing an attribute on a local variable costs 4 bytes
+        (LOAD the local var (1) + LOAD the var's attr (3)).
+
+        Caching a local attribute costs 5 bytes
+        (ACCESS the attribute (4) + STORE the new var (1)).
+
+        Accessing it then costs just 1 byte.
+        """
+        investment = 5
+
+        one_use_before = 4
+        one_use_after = 1
+        one_use_profit = one_use_after - one_use_before
+
+        return self.cache_candidate.amount * one_use_profit - investment
 
     def __repr__(self) -> str:  # pragma: no cover
         mutated_msg = " (WARNING: attr gets mutated)" if self.attribute_mutated else ""

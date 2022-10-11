@@ -13,7 +13,12 @@ class LocalConstant(SpaceSaving):
     usages: int
 
     def saved_bytes(self) -> int:
-        return 4
+        """
+        Not being saved into the global module dictionary saves
+        at least 6 bytes in total - 3 bytes for storing the QSTR
+        and at least 3 bytes for loading it (3 times the usages).
+        """
+        return 6
 
     def __repr__(self) -> str:  # pragma: no cover
         return f"{self.name} ({self.usages} x) (~{self.saved_bytes()} bytes)"

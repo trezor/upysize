@@ -4,13 +4,13 @@ check: style_check code_check
 
 style_check:
 	@echo [ISORT]
-	@isort --check-only .
+	@isort --check-only ./src/**/*.py
 	@echo [BLACK]
 	@black --check .
 
 style:
 	@echo [ISORT]
-	@isort .
+	@isort ./src/**/*.py
 	@echo [BLACK]
 	@black .
 

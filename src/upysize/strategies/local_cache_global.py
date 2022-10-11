@@ -20,7 +20,21 @@ class LocalCacheGlobal(SpaceSaving):
     func: Function
 
     def saved_bytes(self) -> int:
-        return self.cache_candidate.amount + 1
+        """
+        Accessing global variable costs 3 bytes
+
+        Caching a global variable costs 4 bytes
+        (ACCESS the variable (3) + STORE the new var (1)).
+
+        Accessing it then costs just 1 byte.
+        """
+        investment = 4
+
+        one_use_before = 3
+        one_use_after = 1
+        one_use_profit = one_use_after - one_use_before
+
+        return self.cache_candidate.amount * one_use_profit - investment
 
     def __repr__(self) -> str:  # pragma: no cover
         return f"{self.func} - {self.cache_candidate} (~{self.saved_bytes()} bytes)"
