@@ -32,10 +32,10 @@ def test_type_only_import():
     assert len(res) == 3
 
     assert res[0].symbol == "OnlyType"
-    assert res[0].saved_bytes() == 7
+    assert res[0].saved_bytes() == 12
 
     assert res[1].symbol == "Enum1"
-    assert res[1].saved_bytes() == 7
+    assert res[1].saved_bytes() == 12
 
     assert res[2].symbol == "cbor"
-    assert res[2].saved_bytes() == 7
+    assert res[2].saved_bytes() == 12

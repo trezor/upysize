@@ -42,14 +42,14 @@ def test_local_cache_global():
     assert res[0].func.name == "main"
     assert res[0].cache_candidate.cache_string == "messages"
     assert res[0].cache_candidate.amount == 3
-    assert res[0].saved_bytes() == 4
+    assert res[0].saved_bytes() == 2
 
     assert res[1].func.name == "abc"
     assert res[1].cache_candidate.cache_string == "write_int"
     assert res[1].cache_candidate.amount == 4
-    assert res[1].saved_bytes() == 5
+    assert res[1].saved_bytes() == 4
 
     assert res[2].func.name == "defg"
     assert res[2].cache_candidate.cache_string == "abc"
     assert res[2].cache_candidate.amount == 3
-    assert res[2].saved_bytes() == 4
+    assert res[2].saved_bytes() == 2

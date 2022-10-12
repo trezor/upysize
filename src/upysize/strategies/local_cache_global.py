@@ -32,7 +32,7 @@ class LocalCacheGlobal(SpaceSaving):
 
         one_use_before = 3
         one_use_after = 1
-        one_use_profit = one_use_after - one_use_before
+        one_use_profit = one_use_before - one_use_after
 
         return self.cache_candidate.amount * one_use_profit - investment
 

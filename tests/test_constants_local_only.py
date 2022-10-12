@@ -20,4 +20,4 @@ def test_local_only_constants():
     res = local_only_constants(CODE)
     assert len(res) == 1
     assert res[0].name == "X"
-    assert res[0].saved_bytes() == 4
+    assert res[0].saved_bytes() == 6

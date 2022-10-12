@@ -56,7 +56,7 @@ def test_local_cache_attribute():
     assert res[0].cache_candidate.amount == 4
     assert res[0].attribute_mutated is False
     assert res[0].symbol_assigned is False
-    assert res[0].saved_bytes() == 8
+    assert res[0].saved_bytes() == 7
 
     assert res[1].func.name == "nonmutating_func"
     assert res[1].cache_candidate.cache_string == "msg.xyz"
@@ -70,18 +70,18 @@ def test_local_cache_attribute():
     assert res[2].cache_candidate.amount == 3
     assert res[2].attribute_mutated is True
     assert res[2].symbol_assigned is False
-    assert res[2].saved_bytes() == 6
+    assert res[2].saved_bytes() == 4
 
     assert res[3].func.name == "mutating_func2"
     assert res[3].cache_candidate.cache_string == "msg.abc"
     assert res[3].cache_candidate.amount == 4
     assert res[3].attribute_mutated is True
     assert res[3].symbol_assigned is False
-    assert res[3].saved_bytes() == 8
+    assert res[3].saved_bytes() == 7
 
     assert res[4].func.name == "reassigned_func"
     assert res[4].cache_candidate.cache_string == "res.abc"
     assert res[4].cache_candidate.amount == 4
     assert res[4].attribute_mutated is False
     assert res[4].symbol_assigned is True
-    assert res[4].saved_bytes() == 8
+    assert res[4].saved_bytes() == 7

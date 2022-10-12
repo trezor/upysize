@@ -37,7 +37,7 @@ class OneFunctionImport(SpaceSaving):
         global_access = 3
         local_access = 1
 
-        return self.usages_in_func * (global_access - local_access) - (
+        return self.usages_in_func * (global_access - local_access) + (
             global_import - local_import
         )
 
